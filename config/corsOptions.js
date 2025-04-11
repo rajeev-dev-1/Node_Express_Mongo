@@ -1,6 +1,7 @@
 const whiteList = [
     'https://www.google.com', 
-    'http://localhost:3500/'
+    'http://localhost:3500/',
+    'https://node-express-mongo-5zbp.onrender.com'
 ];
 const corsOptions = {
     origin: (origin, callback)=>{
