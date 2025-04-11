@@ -48,13 +48,14 @@ app.use('/employees', require('./routes/api/empoyees'));
 
 app.all('*', (req, res)=>{
     res.status(404);
-    if(req.accepts('html')){
+    res.sendFile(path.join(__dirname,'views', '404.html'));
+    /*if(req.accepts('html')){
         res.sendFile(path.join(__dirname,'views', '404.html'));
     } else if(req.accepts('json')){
         res.json({error: '404 Does not exist'});
     } else {
         res.type('text').send('404 Does not exist');
-    }
+    }*/
 })
 
 app.use(errorLogger);
